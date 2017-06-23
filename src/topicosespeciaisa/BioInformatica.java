@@ -173,8 +173,8 @@ public class BioInformatica {
         verticesList.addAll(this.vertices);
         for (String aresta : this.arestas) {
             String nodes[] = aresta.split("\\|");
-            int from = verticesList.indexOf(nodes[0]);
-            int to = verticesList.indexOf(nodes[1]);
+            int from = verticesList.indexOf(nodes[0]) + 1;
+            int to = verticesList.indexOf(nodes[1]) + 1;
             output.append(from + "\t" + to + "\t1.000\n");
 
         }
